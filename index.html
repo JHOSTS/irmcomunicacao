@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRM Comunicação</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+        <nav>
+            <div class="nav-items">
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Clientes</a>
+                <div class="dropdown-content" id="clientes">
+                    <a href="https://www.instagram.com/marmitas.rainhadadieta">Rainha da Dieta</a>
+                <a href="https://www.instagram.com/viagensesensacoes">Viagens & Sensações</a>
+            <a href="https://www.instagram.com/academiaguerrerogym">Guerrero Gym</a>
+        <a href="https://www.instagram.com/flaratech">Flara Tech</a>
+    </div>
+</div>
+<a href="#contato">Contato</a>
+</div>
+</nav>
+
+<section id="contato">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/irmcomunicacao" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/55 11 97019-7981" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</section>
+
+    <script>
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            var dropdownContent = this.nextElementSibling;
+            dropdownContent.classList.toggle('show');
+        });
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
